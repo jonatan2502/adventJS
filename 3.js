@@ -1,8 +1,12 @@
 function distributeGifts(packOfGifts, reindeers) {
     let packWeight = 0
     let capacity = 0
-    packOfGifts.forEach( g => packWeight += g.length)
-    reindeers.forEach( r => capacity += (r.length * 2))
+    for (let index = 0; index < packOfGifts.length; index++) {
+        packWeight += packOfGifts[index].length
+    }
+    for (let index = 0; index < reindeers.length; index++) {
+        packWeight += (reindeers[index].length * 2)
+    }
     return Math.floor(capacity/packWeight)
   }
 
