@@ -17,8 +17,8 @@ function fitsInOneBox(boxes) {
         if ((boxes[i].l < boxes[i+1].l) && (boxes[i].w < boxes[i+1].w) && (boxes[i].h < boxes[i+1].h)) fits = true
         else fits = false
     }
-    
-    return sizes
+
+    return fits
 }
 
 
