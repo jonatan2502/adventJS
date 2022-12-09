@@ -1,15 +1,15 @@
 function createCube(size) {
-  let bottomRightFace = ''
-  let bottomRightLine = '/' + '_/'.repeat(size) + '\n'
+  let botFace = ''
+  let botLine = '/' + '_/'.repeat(size) + '\n'
 
-  let topRightFace = ''
-  let topRightLine =  '\\_'.repeat(size) + '\\\n'
+  let topFace = ''
+  let topLine =  '\\_'.repeat(size) + '\\\n'
 
   for (let i = 1; i <= size; i++) {
-       topRightFace += ' '.repeat(size-i) + '/' + '\\/'.repeat(i-1) + topRightLine
-       bottomRightFace += ' '.repeat(i-1) + '\\' + '\/\\'.repeat(size-i) + bottomRightLine
+       topFace += ' '.repeat(size-i) + '/' + '\\/'.repeat(i-1) + topLine
+       botFace += ' '.repeat(i-1) + '\\' + '\/\\'.repeat(size-i) + botLine
   }
-  return (topRightFace + bottomRightFace).trimEnd()
+  return (topFace + botFace).trimEnd()
 }
 
 
